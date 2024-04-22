@@ -25,7 +25,7 @@ public class PhonebookController {
 	//리스트 
 	@GetMapping(value="api/phones")
 	public List<PhonebookVo> list(){
-		System.out.println("PhonebookController.listt()");
+		System.out.println("PhonebookController.list()");
 		List<PhonebookVo> phonebookList = phonebookService.exePhoneList();
 		return phonebookList;
 	}
