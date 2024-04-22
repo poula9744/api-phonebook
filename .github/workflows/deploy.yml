@@ -48,4 +48,4 @@ jobs:
             sudo docker pull sunkisttttttt/phonebook:latest
             sudo docker stop phonebook || true
             sudo docker rm phonebook || true
-            sudo docker run -d --name phonebook -p 9000:9000 sunkisttttttt/phonebook:latest
+            sudo docker run -d --name phonebook -p 9002:9002 sunkisttttttt/phonebook:latest
