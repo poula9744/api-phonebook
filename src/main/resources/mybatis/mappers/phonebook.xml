@@ -14,4 +14,16 @@
 			]]>
 	</select>
 	
+	<!-- 데이터1개 가져오기 -->
+	<select id="selectOne" parameterType="int" resultType="com.javaex.vo.PhonebookVo">
+      <![CDATA[
+         select person_id personId,
+	   			  name,
+       			  hp,
+       			  company
+		 from person
+		 where person_id = #{personId}
+      ]]>
+	</select>
+	
 </mapper>
