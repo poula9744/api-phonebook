@@ -27,4 +27,18 @@ public class PhonebookService {
 		PhonebookVo phonebookVo = phonebookDao.selectOne(personId);
 		return phonebookVo;
 	}
+
+	// 수정
+	public int exeModifyPhone(PhonebookVo phonebookVo) {
+		System.out.println("PhonebookService.exeModifyPhone()");
+		int count = phonebookDao.modifyPhone(phonebookVo);
+		return count;
+	}
+
+	// 삭제
+	public int exeDeletePhone(int personId) {
+		System.out.println("PhonebookService.exeDeletePhone()");
+		int count = phonebookDao.deletePhone(personId);
+		return count;
+	}
 }

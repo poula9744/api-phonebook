@@ -30,4 +30,18 @@ public class PhonebookDao {
 		return phoneVo;
 	}
 
+	// 삭제
+	public int deletePhone(int personId) {
+		System.out.println("PhonebookDao.deletePhone()");
+		int count = sqlSession.delete("phonebook.delete", personId);
+		return count;
+	}
+
+	// 수정
+	public int modifyPhone(PhonebookVo phonebookVo) {
+		System.out.println("PhonebookDao.modifyPhone()");
+		int count = sqlSession.update("phonebook.update", phonebookVo);
+		return count;
+	}
+
 }
